@@ -7,18 +7,20 @@ This simple board uses a ITR20403 Optical Photo-interrupt to sense the vibration
 
 The working principle is similar to the more familiar eBow, but rather sensing and inducing vibrations with electromagnetic coils, we sense with an optical sensor and actuate with Lorentz force actuation.
 
-![SystemDiagram](SystemDiagram.png)
+## Simple System Diagram
+![simpleSystemDiagram](simpleSystemDiagram.png)
+This is the signal flow for the sustainer circuit in each board. You need one circuit board for each string you wish to sustain.
 
 ## How to order
 ### JLCPCB
 If you wish to have this exact board, you can order these circuit boards from JLCPCB by uploading GERBER-EMHarpsichord_Sustainer+Playback.zip to JLCPCB. Additionally upload BOM-EMHarpsichord_Sustainer+Playback.csv and CPL-EMHarpsichord_Sustainer+Playback.csv to have JLCPCB assemble the board for you.
-- Double check the orientation of each IC in JLCPCB. They are often incorrect by default.
+Note: Double check the orientation of each IC in JLCPCB. They are often incorrect by default.
 
 ### Other board house
 If you are familiar with a different PCB fabrication, feel free to export as you are familiar would from KiCad.
 
 ### Order from me
-Alternatively, reach out to me (schmia@umich.edu) in case I have some laying around still
+Alternatively, reach out to me (schmia@umich.edu) in case I have some extra :)
 
 ## How to use:
 ### Wiring up
@@ -26,7 +28,8 @@ Alternatively, reach out to me (schmia@umich.edu) in case I have some laying aro
 - Therefore, you must ensure that there are at least 2 ohms between the (+) and (-) terminal of each speaker output.
 - Most of the brass strings on our harpsichord measured less than 1 Ohm, so we opted to put a 2-Ohm 10W Power Resistor between each string and one of the terminals the selected channels.
 - The resistance of a metal string is a function of its material, gauge, length, and temperature. Measure the resistance of
-- A 3 Pin JST XH 2.54mm connector supplies 5V, Ground, and an auxiliary audio imput
+
+- A 3 Pin JST XH 2.54mm connector supplies 5V, Ground, and an auxiliary audio input
 
 ### Magnets
 - To induce vibration, the strings must be exposed to a strong magnetic field. We have been using strong neodymium magnets (purchased from kjmagnetics.com) for this purpose. The strength of the vibration is proportional to the strength of the magnetic field, and although the presence of just one or two magnets usually seems to be enough,
@@ -42,15 +45,17 @@ Additional Notes:
 	- Bar magnets induce stronger vibrations than cylindrical with the same pull force.
 
 ### Notes before ordering/assembling
-- the optical sensor will be placed on the wrong side of the board, but I found it easier to source the components from JLCPCB and desolder/resolder the ITR20403 to the other side of the board. If you can find them for cheap elsewhere, it would probably save you a small headache to order them separately and omit them from the board.
+- If you order based on my files, the optical sensor will be placed on the wrong side of the board. I found it easier to source the components from JLCPCB and desolder/resolder the ITR20403 to the other side of the board. If you can find them for cheap elsewhere, it would probably save you a small headache to order them separately and omit them from the board.
 
-## Design Notes
-- the RelevantDocuments folder holds data sheets and some blog/forum posts I found helpful while designing the board. Dave Corsie's blog helped me figure out how to design the optical pickup circuit and the DIYAudio blog helped me make a better PCB layout for the PAM8406 Chip
+## Design References
+- the 'RelevantDocuments' folder holds data sheets and some blog/forum posts I found helpful while designing the board. Dave Corsie's blog helped me figure out how to design the optical pickup circuit and the DIYAudio blog helped me make a better PCB layout for the PAM8406 Chip.
 
 ## Future Improvements
 ### Support Loads < 2 Ohms
-One of the most obvious shortcomings of this system is the wasted power. If a given string is only 0.5 Ohms and we compensate with a 2 Ohm resistor, most of the power is being dissipated as heat through the resistor rather that contributing towards generating vibrations. On the other hand, this ensures the majority of the heat is generated somewhere other than the string, which prevents detuning of the string.
-###
+One of the most obvious shortcomings of this system is the wasted power. If a given string is only 0.2 Ohms and we compensate with a 2 Ohm resistor, most (~90%) of the power is being dissipated as heat through the resistor rather that contributing towards generating vibrations. I think looking into circuits that are anticipating extremely low loads such as ribbon speakers will be a worthwhile endeavor and likely be a solution for the next version of this circuit.
+
+### Lower Heat Buildup
+On the other hand, the large dummy load ensures the majority of the power is dissipated somewhere other than the string, which prevents heat buildup (and thus detuning) in the string. The magnetic field generated by the string is proportional to current only - it does not factor in voltage.
 
 ## Software Versions used
 KiCad (6.0.7-1)-1 for MaxOS Version 13.4.1
