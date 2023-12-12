@@ -7,8 +7,8 @@
 \pard\pardeftab720\li960\fi-960\partightenfactor0
 
 \f0\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
-# Electromagnetic Harpsichord\
-\
+# Electromagnetic Harpsichord
+
 The EM Harpsichord is an augmented harpsichord that uses optical sensors, audio power amplifier chips, and some simple signal processing to sustain vibrations on the brass strings of the harpsichord. This early version uses one circuit board per string you wish to sustain. A work-in-progress performance/demonstration was given on October 2th, 2023 at the 63rd Annual University of Michigan Organ Conference.\
 \
 ## Working Principle\
