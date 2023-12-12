@@ -11,6 +11,10 @@ The working principle is similar to the more familiar eBow, but rather sensing a
 ![simpleSystemDiagram](simpleSystemDiagram.png)
 This is the signal flow for the sustainer circuit in each board. You need one circuit board for each string you wish to sustain.
 
+## The JLCPCB
+![PCB](../Electronics/ProgressScreenshots/BoardRendering_Sep21_2023.png)
+The circuitboard is small enough to fit between the harpsichord's strings. We mounted them to an aluminum extrusion C Beam with slide nuts, and M4 screws.
+
 ## How to order
 ### JLCPCB
 If you wish to have this exact board, you can order these circuit boards from JLCPCB by uploading GERBER-EMHarpsichord_Sustainer+Playback.zip to JLCPCB. Additionally upload BOM-EMHarpsichord_Sustainer+Playback.csv and CPL-EMHarpsichord_Sustainer+Playback.csv to have JLCPCB assemble the board for you.
@@ -19,7 +23,7 @@ Note: Double check the orientation of each IC in JLCPCB. They are often incorrec
 ### Other board house
 If you are familiar with a different PCB fabrication, feel free to export as you are familiar would from KiCad.
 
-### Order from me
+### Reach out to me
 Alternatively, reach out to me (schmia@umich.edu) in case I have some extra :)
 
 ## How to use:
@@ -38,11 +42,11 @@ Alternatively, reach out to me (schmia@umich.edu) in case I have some extra :)
 - The left output channel of the board to the optical sensor which creates a closed feedback loop to sustain vibrations on the connected string.
 - The right output channel of the board amplifies an auxiliary input signal
 
-Additional Notes:
-	- The optical sensor needs to be placed very precisely over the string to ensure it picks up the vibration. The sensing range of the string is very small and is easy to clip. You can use an oscilloscope on test point 1 (TP1) to make sure the sensor isn't clipping before the gain stage.
-	- If it is clipping, consider moving the sensor board closer to a termination point of the string where its range of vibration is much smaller.
-	- The feedback loop is very sensitive to the position of the sensor. You will likely notice timbral changes as you change the point on the string where the sensor is located, the position of the sensor over the string, and the positions of the magnets.
-	- Bar magnets induce stronger vibrations than cylindrical with the same pull force.
+### Additional Notes:
+- The optical sensor needs to be placed very precisely over the string to ensure it picks up the vibration. The sensing range of the string is very small and is easy to clip. You can use an oscilloscope on test point 1 (TP1) to make sure the sensor isn't clipping before the gain stage.
+- If it is clipping, consider moving the sensor board closer to a termination point of the string where its range of vibration is much smaller.
+- The feedback loop is very sensitive to the position of the sensor. You will likely notice timbral changes as you change the point on the string where the sensor is located, the position of the sensor over the string, and the positions of the magnets.
+- Bar magnets induce stronger vibrations than cylindrical with the same pull force.
 
 ### Notes before ordering/assembling
 - If you order based on my files, the optical sensor will be placed on the wrong side of the board. I found it easier to source the components from JLCPCB and desolder/resolder the ITR20403 to the other side of the board. If you can find them for cheap elsewhere, it would probably save you a small headache to order them separately and omit them from the board.
