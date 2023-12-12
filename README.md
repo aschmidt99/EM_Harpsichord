@@ -12,7 +12,7 @@ The working principle is similar to the more familiar eBow, but rather sensing a
 This is the signal flow for the sustainer circuit in each board. You need one circuit board for each string you wish to sustain.
 
 ## The JLCPCB
-![PCB](../Electronics/ProgressScreenshots/BoardRendering_Sep21_2023.png)
+![PCB](../master/Electronics/ProgressScreenshots/BoardRendering_Sep21_2023.png)
 The circuitboard is small enough to fit between the harpsichord's strings. We mounted them to an aluminum extrusion C Beam with slide nuts, and M4 screws.
 
 ## How to order
