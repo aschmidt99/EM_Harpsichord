@@ -2057,8 +2057,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 90a6d190-77a6-44ae-97ed-1b34037f4865)
   )
-  (text "As of Aug 29 2023:\nNE5532 on JLCPCB: $0.2116\nNE5532 on Digikey: $0.5400\nNE5532 on Mouser: $0.5400\nLM358 on JLCPCB: $0.4200\nLM358 on Digikey:$ $0.400\nLM358 on Mouser: $0.4200"
-    (at 20.574 39.116 0)
+  (text "As of Aug 29 2023:\nNE5532 on JLCPCB: $0.2116 (<-ended up using this)\nNE5532 on Digikey: $0.5400\nNE5532 on Mouser: $0.5400\nLM358 on JLCPCB: $0.4200\nLM358 on Digikey:$ $0.400\nLM358 on Mouser: $0.4200"
+    (at 20.574 48.26 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid bbad52ef-099a-4ded-98db-2d68d559ddaa)
   )
