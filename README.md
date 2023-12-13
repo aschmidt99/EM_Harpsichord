@@ -4,12 +4,8 @@
 
 The EM Harpsichord is an augmented harpsichord that uses optical sensors, audio power amplifier chips, and some simple signal processing to sustain vibrations on the brass strings of the harpsichord. This early version uses one circuit board per string you wish to sustain. A work-in-progress performance/demonstration was given on October 2nd, 2023 at the 63rd Annual University of Michigan Organ Conference. 3 strings had optical sustaining enabled and 8 strings had audio-playback enabled.
 
-## Audio Examples
-Audio Playback Examples:
-
-
-Sustainer Examples:
-
+## Video Examples
+Here is a [selection of audio examples](https://drive.google.com/drive/folders/1B2c4qz-7Rl1Y2wPH64m0Ud0_MTGL74a2?usp=sharing) of both sustainers and audio playback through the harpsichord strings.
 
 ## Working Principle
 This simple board uses a ITR20403 Optical Photo-interrupt to sense the vibrations (position) of a harpsichord string. The derivative of this signal is amplified and sent to a 5-Watt audio amplifier chip (PAM8406) that is normally connected to small 4 or 8 ohm speakers. Rather than connect to a speaker, the output terminals of the speaker chip are connected to each end of one of the strings on a harpsichord. The amplified signal pushes current through the string, which generates an alternating magnetic field that interacts with a strong magnetic field from permanent neodymium magnets.
