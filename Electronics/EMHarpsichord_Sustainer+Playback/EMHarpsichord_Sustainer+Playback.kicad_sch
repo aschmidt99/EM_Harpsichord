@@ -1725,7 +1725,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 7b2ce7a0-fb6b-4cd8-8123-20fd868ce079)
   )
-  (polyline (pts (xy 278.892 65.278) (xy 143.256 65.532))
+  (polyline (pts (xy 278.892 65.278) (xy 141.732 65.532))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 7c5fc4ce-8932-4412-bdb9-54aca3dd6226)
   )

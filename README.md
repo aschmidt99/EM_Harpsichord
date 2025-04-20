@@ -1,3 +1,6 @@
+# NOTE: This repo is outdated!
+Hello! While this repository still covers the basics of Lorentz Force Actuation and feedback, a more comprehensive and curated version can be found on this newer repository: [Sparksichord Project](https://github.com/aschmidt99/Sparksichord_NIME2025)
+
 # Electromagnetic Harpsichord
 
 ![EM_Harpsichord](EM_Harpsichord.png)
